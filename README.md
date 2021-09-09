@@ -7,7 +7,7 @@ Right now I'm shipping early so it absolutely does not cover 100% of the SDK. PR
 
 ## Getting Started
 
-Add the library like so: `npm i pdflibrary`. (Note for folks who may find this repository before I get a chance to push to npm - I may change tghe name. Sorry!)
+Add the library like so: `npm i pdflibrary`. (Note for folks who may find this repository before I get a chance to push to npm - I may change the name. Sorry!)
 
 Next, add it to your code:
 
