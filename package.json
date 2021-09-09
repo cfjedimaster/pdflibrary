@@ -1,0 +1,26 @@
+{
+  "name": "pdflibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfjedimaster/pdflibrary.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Raymond Camden",
+    "url": "https://www.raymondcamdne.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cfjedimaster/pdflibrary/issues"
+  },
+  "homepage": "https://github.com/cfjedimaster/pdflibrary#readme",
+  "dependencies": {
+    "@adobe/pdfservices-node-sdk": "^2.0.0"
+  }
+}
