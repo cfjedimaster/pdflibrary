@@ -15,10 +15,22 @@ Next, add it to your code:
 const pdfLib = require('./pdflibrary');
 ```
 
-And then instantiate it. Right now you must pass the path to your credentials JSON file. Soon I'll add methods to pass in each value by itself (useful for when your credentials are stored in environment variables):
+And then instantiate it. You can pass in your credentials JSON file you got when you signed up:
 
 ```js
 const lib = new pdfLib('./pdftools-api-credentials.json');
+```
+
+Or you can pass in individual values:
+
+```js
+const lib = new pdfLib({
+	clientId: process.env.ADOBE_CLIENT_ID, 
+	clientSecret: process.env.ADOBE_CLIENT_SECRET, 
+	organizationId: process.env.ADOBE_ORGANIZATION_ID, 
+	accountId: process.env.ADOBE_ACCOUNT_ID, 
+	privateKey: process.env.ADOBE_KEY
+});
 ```
 
 ## Methods

@@ -4,10 +4,21 @@ const fs = require('fs/promises');
 class PDFLibrary {
 
 	constructor(creds) {
-		this.credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile(creds)
-       .build();
+
+		if(typeof creds === 'string') {
+			this.credentials =  PDFServicesSdk.Credentials
+			.serviceAccountCredentialsBuilder()
+			.fromFile(creds)
+			.build();
+		} else {
+			this.credentials = PDFServicesSdk.Credentials.serviceAccountCredentialsBuilder()
+			.withClientId(creds.clientId)
+			.withClientSecret(creds.clientSecret)
+			.withPrivateKey(creds.privateKey)
+			.withOrganizationId(creds.organizationId)
+			.withAccountId(creds.accountId)
+			.build();
+		}
 	}
 
 	async _exists(path) {
